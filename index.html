@@ -21,14 +21,6 @@
         <div>
           <span class="dot" id="dot">.</span>
           <img class="bell" src="images/icons/icon-bell.svg" alt="bell" />
-          <!-- <div id="notifications">
-            <ul>
-                <li>Victoria commented on your post</li>
-                <li>Dale liked your post</li>
-                <li>Dawn posted a link</li>
-                <li>Dan shared a photo</li>
-            </ul>
-        </div> -->
         </div>
         <div class="vl head"></div>
         <img
@@ -41,41 +33,33 @@
     </header>
 
     <nav class="navigation">
-      <a>
+      <a href="#main-dashboard">
         <img
           class="nav-icon"
-          href="#main"
           src="images/icons/icon-dashboard.svg"
           alt="dashboard"
         />
       </a>
-      <a>
+      <a href="#members-corner">
         <img
           class="nav-icon"
-          href="#members"
           src="images/icons/icon-members.svg"
           alt="members"
         />
       </a>
-      <a>
-        <img
-          class="nav-icon"
-          href="#social"
-          src="images/icons/icon-visits.svg"
-          alt="visit"
-        />
+      <a href="#social-corner">
+        <img class="nav-icon" src="images/icons/icon-visits.svg" alt="visit" />
       </a>
-      <a>
+      <a href="#settings-corner">
         <img
           class="nav-icon"
-          href="#settings"
           src="images/icons/icon-settings.svg"
           alt="settings"
         />
       </a>
     </nav>
 
-    <main class="main">
+    <main class="main" id="main-dashboard">
       <!-- DASHBOARD - SEARCH BAR - ALERT -->
       <section class="dashboard">
         <h2>Dashboard</h2>
@@ -90,13 +74,15 @@
 
       <!-- TRAFFIC -->
       <section class="traffic">
-        <h3>Traffic</h3>
-        <ul class="traffic-nav">
-          <li class="traffic-nav-link">Hourly</li>
-          <li class="traffic-nav-link">Daily</li>
-          <li class="traffic-nav-link active">Weekly</li>
-          <li class="traffic-nav-link">Monthly</li>
-        </ul>
+        <div class="traffic-container">
+          <h3>Traffic</h3>
+          <ul class="traffic-nav">
+            <li class="traffic-nav-link">Hourly</li>
+            <li class="traffic-nav-link">Daily</li>
+            <li class="traffic-nav-link active">Weekly</li>
+            <li class="traffic-nav-link">Monthly</li>
+          </ul>
+        </div>
         <div class="widget-container-full">
           <!-- element line graph will attach to -->
           <canvas id="traffic-chart"></canvas>
@@ -122,7 +108,7 @@
       </section>
 
       <!-- SOCIAL STATS -->
-      <section class="social">
+      <section class="social" id="social-corner">
         <h3>Social Stats</h3>
         <div class="social-wrapper">
           <div class="social-container">
@@ -153,7 +139,7 @@
             </div>
             <div class="social-text">
               <p>Twitter</p>
-              <p>10,345</p>
+              <span>10,345</span>
             </div>
           </div>
           <!-- Facebook -->
@@ -180,7 +166,7 @@
             </div>
             <div class="social-text">
               <p>Facebook</p>
-              <p>8,739</p>
+              <span>8,739</span>
             </div>
           </div>
           <!-- Google+ -->
@@ -222,18 +208,22 @@
             </div>
             <div class="social-text">
               <p>Google+</p>
-              <p>2,530</p>
+              <span>2,530</span>
             </div>
           </div>
         </div>
       </section>
 
       <!-- NEW MEMBERS -->
-      <section class="members">
+      <section class="members" id="members-corner">
         <h3>New Members</h3>
         <!-- Victoria -->
         <div class="members-container">
-          <img src="images/profile/member-1.jpg" class="profile-image" />
+          <img
+            src="images/profile/member-1.jpg"
+            alt="Victoria Chambers Image"
+            class="profile-image"
+          />
           <div class="members-text">
             <p>Victoria Chambers</p>
             <a href="#">victoria.chambers80@example.com</a>
@@ -242,7 +232,11 @@
         </div>
         <!-- Dale -->
         <div class="members-container">
-          <img src="images/profile/member-2.jpg" class="profile-image" />
+          <img
+            src="images/profile/member-2.jpg"
+            alt="Dale Byrd Image"
+            class="profile-image"
+          />
           <div class="members-text">
             <p>Dale Byrd</p>
             <a href="#">dale.byrd52@example.com</a>
@@ -251,7 +245,11 @@
         </div>
         <!-- Dawn -->
         <div class="members-container">
-          <img src="images/profile/member-3.jpg" class="profile-image" />
+          <img
+            src="images/profile/member-3.jpg"
+            alt="Dawn Wood Image"
+            class="profile-image"
+          />
           <div class="members-text">
             <p>Dawn Wood</p>
             <a href="#">dawn.wood16@example.com</a>
@@ -260,7 +258,11 @@
         </div>
         <!-- Dan -->
         <div class="members-container">
-          <img src="images/profile/member-4.jpg" class="profile-image" />
+          <img
+            src="images/profile/member-4.jpg"
+            alt="Dan Oliver Image"
+            class="profile-image"
+          />
           <div class="members-text">
             <p>Dan Oliver</p>
             <a href="#">dan.oliver82@example.com</a>
@@ -273,7 +275,11 @@
       <section class="activity">
         <h3>Recent Activity</h3>
         <div class="activity-container">
-          <img src="images/profile/member-1.jpg" class="profile-image" />
+          <img
+            src="images/profile/member-1.jpg"
+            alt="Victoria Chambers Image"
+            class="profile-image"
+          />
           <div class="activity-text">
             <p>Victoria Chamber commented on YourApp's SEO Tips</p>
             <p>4 hours ago</p>
@@ -284,7 +290,11 @@
         </div>
 
         <div class="activity-container">
-          <img src="images/profile/member-2.jpg" class="profile-image" />
+          <img
+            src="images/profile/member-2.jpg"
+            alt="Dale Byrd Image"
+            class="profile-image"
+          />
           <div class="activity-text">
             <p>Dale Byrd like the post Facebook's Changes for 2016</p>
             <p>5 hours ago</p>
@@ -295,7 +305,11 @@
         </div>
 
         <div class="activity-container">
-          <img src="images/profile/member-3.jpg" class="profile-image" />
+          <img
+            src="images/profile/member-3.jpg"
+            alt="Dawn Wood Chambers Image"
+            class="profile-image"
+          />
           <div class="activity-text">
             <p>Dawn Wood commented on Facebook's Changes for 2016</p>
             <p>5 hours ago</p>
@@ -306,7 +320,11 @@
         </div>
 
         <div class="activity-container">
-          <img src="images/profile/member-4.jpg" class="profile-image" />
+          <img
+            src="images/profile/member-4.jpg"
+            alt="Dan Oliver Image"
+            class="profile-image"
+          />
           <div class="activity-text">
             <p>Dan Oliver posted YourApp's SEO Tips</p>
             <p>1 day ago</p>
@@ -329,7 +347,6 @@
             required
           />
           <textarea
-            type="textarea"
             placeholder="Message for user"
             class="form-area"
             id="messageField"
@@ -340,7 +357,7 @@
       </section>
 
       <!-- SETTINGS -->
-      <section class="settings">
+      <section class="settings" id="settings-corner">
         <h3>Settings</h3>
         <div class="toggle-container">
           <div class="toggle-grid">
@@ -360,7 +377,7 @@
           </div>
         </div>
 
-        <select class="timezone" id="timezone" name="timezone" required>
+        <select class="timezone" id="timezone" name="timezone" required size="1">
           <option>Select a Timezone</option>
           <optgroup label="Timezone">
             <option value="Alaskan">Alaskan</option>
