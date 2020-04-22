@@ -1,0 +1,140 @@
+/* Media Queries */
+
+@media (min-width: 768px) {
+  /* Grid */
+  .grid-container {
+    margin: 0 auto;
+    grid-template-columns: 100px auto;
+    grid-template-areas:
+      "header header"
+      "nav main"
+      "nav main";
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "dashboard dashboard"
+      "traffic traffic"
+      "daily mobile"
+      "social social"
+      "members activity"
+      "message settings";
+  }
+
+  .dashboard {
+    grid-area: dashboard;
+  }
+
+  .traffic {
+    grid-area: traffic;
+  }
+
+  .daily {
+    grid-area: daily;
+  }
+
+  .mobile {
+    grid-area: mobile;
+  }
+
+  .social {
+    grid-area: social;
+  }
+
+  .members {
+    grid-area: members;
+  }
+
+  .activity {
+    grid-area: activity;
+  }
+
+  .message {
+    grid-area: message;
+  }
+
+  .settings {
+    grid-area: settings;
+  }
+
+  /* Widget */
+
+  .widget-container-full {
+    width: 90vw;
+  }
+
+  .widget-container-half {
+    width: 45vw;
+  }
+  /* Flexbox */
+  .navigation {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .nav-icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 40px;
+  }
+
+  .traffic-nav {
+    justify-content: flex-end;
+    float: right;
+  }
+
+  .social-wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 100px auto;
+  }
+
+  /* Base Styles */
+  .alert-banner {
+    justify-content: space-between;
+    width: auto;
+  }
+
+  .alert-banner p {
+    margin-left: 30px;
+  }
+
+  .alert-banner-close {
+    margin-right: 30px;
+  }
+
+  h3 {
+    float: left;
+  }
+
+  .traffic-nav-link {
+    margin-left: 40px;
+  }
+
+  .activity-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .activity-text {
+    font-size: 1rem;
+  }
+
+  .arrow {
+    display: block;
+    float: right;
+    align-items: right;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .toggle-grid {
+    margin-left: -100px;
+  }
+}
